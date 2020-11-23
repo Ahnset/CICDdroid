@@ -24,7 +24,13 @@ class MainActivity : AppCompatActivity() {
 
             trackInterestRateAnalytics()
             trackRetirementAgeAnalytics()
+            updateResultTextView()
         }
+    }
+
+    private fun updateResultTextView() {
+        val interestRate = interestEditText.text.toString().toFloat()
+        resultTextView.text = "At the current rate of $interestRate ..."
     }
 
     private fun trackInterestRateAnalytics() {
